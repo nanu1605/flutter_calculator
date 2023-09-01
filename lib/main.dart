@@ -21,6 +21,7 @@ class _MyHomePageState extends State<MyHomePage> {
   late String texttodisplay = '';
   late String operation = '';
   late String history = '';
+  static const dullyellow = const Color(0xFF827717);
 
   void buttonclick(String buttonvalue){
     if(buttonvalue=='AC'){
@@ -75,9 +76,10 @@ class _MyHomePageState extends State<MyHomePage> {
           style: TextStyle(fontFamily: 'Raleway', fontSize: 40),
         ),
         centerTitle: true,
-        backgroundColor: Colors.red[900],
+        backgroundColor: Colors.black,
       ),
       body: Container(
+        color: Colors.black,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
@@ -86,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
               alignment: const Alignment(1.0, 1.0),
               child: Text(
                 history,
-                style: const TextStyle(fontSize: 24, color: Colors.black),
+                style: const TextStyle(fontSize: 36, color: Colors.white),
               ),
             ),
             Container(
@@ -94,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
               alignment: const Alignment(1.0, 1.0),
               child: Text(
                 texttodisplay,
-                style: const TextStyle(fontSize: 48, color: Colors.black),
+                style: const TextStyle(fontSize: 54, color: Colors.white),
               ),
             ),
             Column(
@@ -105,13 +107,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     button.buildButton(
-                        '7', () => buttonclick('7'), Colors.blue),
+                        '7', () => buttonclick('7'), Colors.blueGrey),
                     button.buildButton(
-                        '8', () => buttonclick('8'), Colors.blue),
+                        '8', () => buttonclick('8'), Colors.blueGrey),
                     button.buildButton(
-                        '9', () => buttonclick('9'), Colors.blue),
+                        '9', () => buttonclick('9'), Colors.blueGrey),
                     button.buildButton(
-                        '÷', () => buttonclick('/'), Colors.amber),
+                        '÷', () => buttonclick('/'), dullyellow),
                   ],
                 ),
                 Row(
@@ -119,13 +121,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     button.buildButton(
-                        '4', () => buttonclick('4'), Colors.blue),
+                        '4', () => buttonclick('4'), Colors.blueGrey),
                     button.buildButton(
-                        '5', () => buttonclick('5'), Colors.blue),
+                        '5', () => buttonclick('5'), Colors.blueGrey),
                     button.buildButton(
-                        '6', () => buttonclick('6'), Colors.blue),
+                        '6', () => buttonclick('6'), Colors.blueGrey),
                     button.buildButton(
-                        'x', () => buttonclick('*'), Colors.amber),
+                        'x', () => buttonclick('*'), dullyellow),
                   ],
                 ),
                 Row(
@@ -133,13 +135,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     button.buildButton(
-                        '1', () => buttonclick('1'), Colors.blue),
+                        '1', () => buttonclick('1'), Colors.blueGrey),
                     button.buildButton(
-                        '2', () => buttonclick('2'), Colors.blue),
+                        '2', () => buttonclick('2'), Colors.blueGrey),
                     button.buildButton(
-                        '3', () => buttonclick('3'), Colors.blue),
+                        '3', () => buttonclick('3'), Colors.blueGrey),
                     button.buildButton(
-                        '-', () => buttonclick('-'), Colors.amber),
+                        '-', () => buttonclick('-'), dullyellow),
                   ],
                 ),
                 Row(
@@ -147,13 +149,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     button.buildButton(
-                        'AC', () => buttonclick('AC'), Colors.blue),
+                        'C', () => buttonclick('back'), dullyellow),
                     button.buildButton(
-                        '0', () => buttonclick('0'), Colors.blue),
+                        '0', () => buttonclick('0'), Colors.blueGrey),
                     button.buildButton(
-                        '=', () => buttonclick('='), Colors.blue),
+                        '=', () => buttonclick('='), Colors.blueGrey),
                     button.buildButton(
-                        '+', () => buttonclick('+'), Colors.amber),
+                        '+', () => buttonclick('+'), dullyellow),
                   ],
                 ),
                 Row(
@@ -161,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     button.buildButton(
-                        '<-', () => buttonclick('back'), Colors.blue),
+                        'AC', () => buttonclick('AC'), dullyellow),
                   ],
                 ),
               ],
